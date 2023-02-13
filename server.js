@@ -15,7 +15,6 @@ const askUser = () => {
             "Update Role",
             "Remove Role",
             "View Budgets",
-            "View Departments",
             "Remove Departments",
             "Add Departments",
             
@@ -26,14 +25,10 @@ const askUser = () => {
 ])
 
 .then((response) => {
-    const {options} = response; {
+    const {options} = response; 
 
     if (info.options === "View Employees") {
         viewEmployees();
-    }
-
-    if (info.options === "View Departments") {
-        viewDepartments();
     }
 
     if (info.options === "Add Employee") {
@@ -48,7 +43,7 @@ const askUser = () => {
      }
 
     if (info.options === "Remove Role") {
-        viewRemoveRole90;
+        viewRemoveRole();
     }
 
     if (info.options === "View Budgets") {
@@ -67,7 +62,16 @@ const askUser = () => {
         viewAddDepartments();
     }
 
-     }
-})
-}
+     
+});
+};
 
+const viewEmployees =>
+const viewDepartments =>
+const viewAddEmployee =>
+const viewRemoveEmployee =>
+const viewUpdateRole =>
+const viewRemoveRole =>
+const viewAddDepartments =>
+const viewRemoveDepartments =>
+const viewBudgets =>
