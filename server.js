@@ -51,7 +51,7 @@ const askUser = () => {
     }
 
     if (info.options === "View Departments") {
-        viewAddDepartments();
+        viewDepartments();
     }
 
     if (info.options === "Remove Departments") {
@@ -66,10 +66,18 @@ const askUser = () => {
 });
 };
 
-const viewEmployees =>
-const viewDepartments =>
-const viewAddEmployee =>
-const viewRemoveEmployee =>
+const viewEmployees = () => {
+    const request = `SELECT employee.id, employee.first_name, employee.last_name`,
+    CONCAT(first_name, "", last_name) AS "employee name"
+    console.log("viewing all employees")
+
+};
+const viewDepartments = () => {
+    const request = `SELECT  first_name, last_name, department.id, role_id`,
+    CONCAT (department_name, "", role_name),
+};
+const viewAddEmployee = () =>
+const viewRemoveEmployee = () =>
 const viewUpdateRole =>
 const viewRemoveRole =>
 const viewAddDepartments =>
