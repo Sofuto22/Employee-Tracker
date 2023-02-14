@@ -132,12 +132,44 @@ const viewRemoveRole = () => {
 
 };
 const viewAddDepartments = () => {
-    
+    inquirer.prompt ([
+        {
+            type: "input",
+            name: "Department",
+            message: "Department Name",
+        },
+
+        {
+            type: "input",
+            name: "ID",
+            message: "Department ID",
+        },
+    ])
+
+    .then((options))
+
 
 };
 const viewRemoveDepartments = () =>{
-
+    let request =`SELECT employee.id, first_name, last_name, department_id_id`;
+    inquirer.prompt ([
+        {
+            name: "selectDepartment",
+            type: "list",
+            message: "Which department do you want to remove?",
+            choices: roleDepartment,
+        },
+    ])
 };
 const viewBudgets = () => {
+    let request = `SELECT department_name role_id`;
+    inquirer.prompt ([
+        {
+            name:"selectDepartmentBudget",
+            type:"list",
+            message:"Which budget do you want to view?",
+            choices: roleBudget,
+        },
+    ])
 
 };
