@@ -74,12 +74,59 @@ const viewEmployees = () => {
 };
 const viewDepartments = () => {
     const request = `SELECT  first_name, last_name, department.id, role_id`,
-    CONCAT (department_name, "", role_name),
+    CONCAT (department_name, "", role_name)
 };
-const viewAddEmployee = () =>
-const viewRemoveEmployee = () =>
-const viewUpdateRole =>
-const viewRemoveRole =>
-const viewAddDepartments =>
-const viewRemoveDepartments =>
-const viewBudgets =>
+const viewAddEmployee = () => {
+    inquirer.prompt ([
+        {
+            type: "input",
+            name: "firstName",
+            message: "First name of the employee",
+        },
+
+        {
+            type: "input",
+            name: "lastName",
+            message: "Last name of the employee",
+        },
+    ])
+
+    .then((options))
+
+};
+const viewRemoveEmployee = () => {
+    let request = `SELECT employee.id, first_name, last_name FROM employee`;
+    inquirer.prompt ([
+         {
+            name: "selectEmployee",
+            type: "list",
+            message: "Who would you like to remove?",
+            choices: employeeNamesArray,
+         },
+    ])
+
+};
+const viewUpdateRole = () => {
+    let request = `SELECT employee.id, first_name, last_name, role_id`;
+    inquirer.prompt ([
+        {
+            name:"selectRole",
+            type:"list",
+            message:"Which role would you like to switch to",
+            choices: roleArray,
+        },
+    ])
+
+};
+const viewRemoveRole = () => {
+
+};
+const viewAddDepartments = () => {
+
+};
+const viewRemoveDepartments = () =>{
+
+};
+const viewBudgets = () => {
+
+};
