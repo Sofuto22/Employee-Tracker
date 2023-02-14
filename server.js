@@ -47,7 +47,7 @@ const askUser = () => {
     }
 
     if (info.options === "View Budgets") {
-        viewViewBudgets();
+        viewBudgets();
     }
 
     if (info.options === "View Departments") {
@@ -96,6 +96,7 @@ const viewAddEmployee = () => {
 };
 const viewRemoveEmployee = () => {
     let request = `SELECT employee.id, first_name, last_name FROM employee`;
+
     inquirer.prompt ([
          {
             name: "selectEmployee",
@@ -119,9 +120,19 @@ const viewUpdateRole = () => {
 
 };
 const viewRemoveRole = () => {
+    let request = `SELECT employee.id, first_name, last_name, role_id`;
+    inquirer.prompt ([
+        {
+            name: "selectRole",
+            type: "list",
+            message: "Which role do you want to remove?",
+            choices: roleArray,
+        },
+    ])
 
 };
 const viewAddDepartments = () => {
+    
 
 };
 const viewRemoveDepartments = () =>{
